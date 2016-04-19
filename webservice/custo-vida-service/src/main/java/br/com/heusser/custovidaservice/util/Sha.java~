@@ -1,0 +1,7 @@
+public class Sha {
+
+	public static String encrypt(String string){
+		return "";
+	}	
+
+}

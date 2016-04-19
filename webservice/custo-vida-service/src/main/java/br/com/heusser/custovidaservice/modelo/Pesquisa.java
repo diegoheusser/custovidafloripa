@@ -1,0 +1,134 @@
+package br.com.heusser.custovidaservice.modelo;
+
+import java.util.Date;
+import br.com.heusser.custovidaservice.modelo.Usuario;
+import br.com.heusser.custovidaservice.modelo.Fonte;
+import br.com.heusser.custovidaservice.modelo.Item;
+
+public class Pesquisa {
+
+    private int pesquisaid;
+
+    private double valorLido;
+
+    private String marca;
+
+    private String especificacao;
+
+    private String mudouMarca;
+
+    private Fonte fonte;
+
+    private Item item;
+
+    private Usuario usuario;
+
+    private Date data;
+
+    private int semana;
+
+    private int mes;
+
+    private int ano;
+
+    public Date getData() {
+        return data;
+    }
+
+    public Pesquisa() {
+        super();
+        this.item = new Item();
+    }
+ 
+    public int getPesquisaid() {
+        return pesquisaid;
+    }
+
+    public void setPesquisaid(int pesquisaid) {
+        this.pesquisaid = pesquisaid;
+    }
+
+    public double getValorLido() {
+        return valorLido;
+    }
+
+    public void setValorLido(double valorLido) {
+        this.valorLido = valorLido;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getEspecificacao() {
+        return especificacao;
+    }
+
+    public void setEspecificacao(String especificacao) {
+        this.especificacao = especificacao;
+    }
+
+    public Fonte getFonte() {
+        return fonte;
+    }
+
+    public String getMudouMarca() {
+        return mudouMarca;
+    }
+
+    public void setMudouMarca(String mudouMarca) {
+        this.mudouMarca = mudouMarca;
+    }
+
+    public void setFonte(Fonte fonte) {
+        this.fonte = fonte;
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
+    }
+
+    public int getSemana() {
+        return semana;
+    }
+
+    public void setSemana(int semana) {
+        this.semana = semana;
+    }
+
+    public int getMes() {
+        return mes;
+    }
+
+    public void setMes(int mes) {
+        this.mes = mes;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+}

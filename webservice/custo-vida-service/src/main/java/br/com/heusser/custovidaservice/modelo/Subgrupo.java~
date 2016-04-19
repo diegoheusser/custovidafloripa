@@ -1,0 +1,51 @@
+package br.com.heusser.custovidaservice.modelo;
+
+import br.com.heusse.custovidaservice.modelo.Grupo;
+
+public class Subgrupo {
+
+    private int subgrupoid;
+    
+    private String descricao;
+    
+    private String identificador;
+    
+    private Grupo grupo;    
+    
+    public Subgrupo() {
+        this.grupo = new Grupo();
+    }
+
+    public int getSubgrupoid() {
+        return subgrupoid;
+    }
+
+    public void setSubgrupoid(int subgrupoid) {
+        this.subgrupoid = subgrupoid;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getIdentificador() {
+        return identificador;
+    }
+
+    public void setIdentificador(String identificador) {
+        this.identificador = identificador;
+    }
+
+    public Grupo getGrupo() {
+        return grupo;
+    }
+
+    public void setGrupo(Grupo grupo) {
+        this.grupo = grupo;
+    }
+     
+}

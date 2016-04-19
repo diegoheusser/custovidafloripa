@@ -1,0 +1,100 @@
+package br.com.heusser.custovidaservice.modelo;
+
+import java.util.List;
+import br.com.heusser.custovidaservice.modelo.TipoUsuario;
+import br.com.heusser.custovidaservice.modelo.Pesquisa;
+import br.com.heusser.custovidaservice.modelo.Fonte;
+import br.com.heusser.custovidaservice.util.Sha;
+
+public class Usuario {
+
+    private int usuarioid;
+
+    private String nomeCompleto;
+
+    private String nick;
+
+    private String senha;
+    
+    private boolean ativo;
+    
+    private TipoUsuario tipoUsuario;
+        
+    private List<Pesquisa> pesquisas;
+    
+    private List<Fonte> fontes;
+    
+    public Usuario() {
+        super();
+    }
+
+    public int getUsuarioid() {
+        return usuarioid;
+    }
+
+    public void setId(int id) {
+        this.usuarioid = id;
+    }
+
+    public String getNomeCompleto() {
+        return nomeCompleto;
+    }
+
+    public void setNomeCompleto(String nomeCompleto) {
+        this.nomeCompleto = nomeCompleto;
+    }
+
+    public String getNick() {
+        return nick;
+    }
+
+    public void setNick(String nick) {
+        this.nick = nick;
+    }
+
+
+    public boolean isAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(boolean ativo) {
+        this.ativo = ativo;
+    }
+
+    public TipoUsuario getTipoUsuario() {
+        return tipoUsuario;
+    }
+
+    public void setTipoUsuario(TipoUsuario tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
+    }
+
+    public List<Pesquisa> getPesquisas() {
+        return pesquisas;
+    }
+
+    public void setPesquisas(List<Pesquisa> pesquisas) {
+        this.pesquisas = pesquisas;
+    }
+
+    public List<Fonte> getFontes() {
+        return fontes;
+    }
+
+    public void setFontes(List<Fonte> fontes) {
+        this.fontes = fontes;
+    }
+    
+    public void addFonte(Fonte fonte) {
+        this.fontes.add(fonte);
+    }
+
+	public void setSenha(String senha) {
+		this.senha = Sha.encrypt(senha);
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+   
+}
